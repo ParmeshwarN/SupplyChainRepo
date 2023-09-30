@@ -6,11 +6,46 @@
 <%-- <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> --%>    
 <!DOCTYPE html>
 <html>
-<head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<style>
+ /* body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}  */
+th, td {
+  border-style:solid;
+  border-color: #96D4D4;
+}
+footer { 
+    position: absolute; 
+    bottom: 0; 
+    right: 0; 
+    z-index:10;
+    background-color: gray;
+}
+</style>
 </head>
+<nav>
+<table>
+&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;<thead>Supply Chain Management :eShoppy</thead><br/><br/>
+<tr>
+<td><a href="">Home</a> &nbsp;&nbsp; <a href="dealerRegistration.jsp" target="_self">Register As Dealer</a>&nbsp;&nbsp; <a href="customerRegistration.jsp">Register As Customer</a>&nbsp;&nbsp; 
+<a href="order.jsp">Place an Order</a>&nbsp;&nbsp; 
+<a href="pendingOrders.jsp">Pending  Orders(Dealer)</a>&nbsp;&nbsp; 
+<a href="assignDealer.jsp">Assign Dealer(Admin)</a>&nbsp;&nbsp; 
+<a href="trackOrder.jsp">Track Order(Dealer)</a>
 
+
+
+</td>
+</tr>
+<tr>
+</tr>
+</table>
+</nav>
+ 
 <body>
 
 <script type="text/javascript">
@@ -104,10 +139,11 @@ function test2(){
 
 
 
-<%-- <c:forEach items="${pl}" var="k">
-<c:out value="${k}"/>
-
-</c:forEach> --%>
+<footer>
+     <p>Author: SEED INFOTECH<br>
+  <a href="mailto:parmeshwar.narvane@gmail.com">Email</a></p>
+</footer>
 
 </body>
+
 </html> 
