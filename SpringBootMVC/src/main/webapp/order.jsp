@@ -36,7 +36,7 @@ td {
 <a href="order.jsp">Place an Order</a>&nbsp;&nbsp; 
 <a href="pendingOrders.jsp">Pending  Orders(Dealer)</a>&nbsp;&nbsp; 
 <a href="assignDealer.jsp">Assign Dealer(Admin)</a>&nbsp;&nbsp; 
-<a href="trackOrder.jsp">Track Order(Dealer)</a>
+<a href="getData2.jsp">Track Order(Dealer)</a>
 
 
 

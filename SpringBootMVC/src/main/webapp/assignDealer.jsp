@@ -35,8 +35,8 @@ td {
 <td><a href="">Home</a> &nbsp;&nbsp; <a href="dealerRegistration.jsp" target="_self">Register As Dealer</a>&nbsp;&nbsp; <a href="customerRegistration.jsp">Register As Customer</a>&nbsp;&nbsp; 
 <a href="order.jsp">Place an Order</a>&nbsp;&nbsp; 
 <a href="pendingOrders.jsp">Pending  Orders(Dealer)</a>&nbsp;&nbsp; 
-<a href="getData2">Assign Dealer(Admin)</a>&nbsp;&nbsp; 
-<a href="trackOrder.jsp">Track Order(Dealer)</a>
+<a href="getData3">Assign Dealer(Admin)</a>&nbsp;&nbsp; 
+<a href="getData2">Track Order(Dealer)</a>
 
 
 

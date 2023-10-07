@@ -35,7 +35,7 @@ footer {
 <a href="order.jsp">Place an Order</a>&nbsp;&nbsp; 
 <a href="pendingOrders.jsp">Pending  Orders(Dealer)</a>&nbsp;&nbsp; 
 <a href="assignDealer.jsp">Assign Dealer(Admin)</a>&nbsp;&nbsp; 
-<a href="trackOrder.jsp">Track Order(Dealer)</a>
+<a href="getData2.jsp">Track Order(Dealer)</a>
 
 
 
@@ -49,19 +49,59 @@ footer {
 <body>
 
 <script type="text/javascript">
+let arr1=new Array();
+let arr2=new Array();
+//const gombok=document.getElementsByTagName('button')
+function test3(){
+	
+let buttons=	document.querySelectorAll(".btn")
+	for (i = 0; i < buttons.length; i++) {
+		buttons[i].addEventListener('click', function () {
+			this.textContent='Accepted';
+			arr1[i]=1;
+			console.log(arr1[i]);
+			})
+	  buttons[++i].addEventListener('click', function () {
+			this.textContent='Rejected';
+			arr2[i]=0;
+			console.log(arr2[i]);
+			})		
+	}
+	
+}	
+
 
 
 function test(){
-	console.log("tested");
+	
   document.getElementById('btn1').innerHTML = 'Accepted';  
   
 }
 
 function test2(){
-	console.log("tested");
+	
   document.getElementById('btn2').innerHTML = 'Rejected';   
  
 }
+function addRowHandlers() {
+    var table = document.getElementById("tableId");
+    var rows = table.getElementsByTagName("tr");
+    for (i = 1; i < rows.length; i++) {
+        row = table.rows[i];
+        row.onclick = function(){
+        	var cell = this.getElementsByTagName("td")[0];
+                           cell.innerHTML="Accepted";
+                       console.log("hi");   
+                      };
+    }
+}
+
+function handler1(myEvent) {
+	  
+	  this.getElementsByTagName("button").innerHTML = 'Rejected'; 
+	  alert("hi");
+	}
+
 </script>
 <%-- <%
 //out.write(""+request.getAttribute("pl"));
@@ -74,7 +114,7 @@ function test2(){
     
 %> --%>
 
-<table width="59%" border="1">
+<table width="59%" border="1" id="tableId">
     <%
     int srNo=0;
     List<Product> li= (List)request.getAttribute("pl");
@@ -111,11 +151,11 @@ function test2(){
                      <%=p.getDeliveryAddress()%>
                      </td>
                      <td>
-                     <button id='btn1' onclick="test()" value="Accepted">Accept</button>
+                     <button id='btn1' class="btn" onclick="test3()" value="Accepted">Accept</button>
                      <span id='label1'></span>
-                      <button id='btn2' onclick="test2()" value="Rejected">Reject</button>
+                      <button id='btn2' class="btn"  onclick="test3()" value="Rejected">Reject</button>
                       <span id='label2'></span>
-                    
+                   
                      </td>
                      <td>
                      <%=LocalDate.now()%>
@@ -128,13 +168,19 @@ function test2(){
                  
                  }
                 %> 
-                                
-                </tr>
+                            
+              
                 
        
 </table>
 
 
+<%
+     String ar1[] = request.getParameterValues("arr1");
+     String ar2[] = request.getParameterValues("arr2");
+     application.setAttribute("k1", ar1);
+     application.setAttribute("k2", ar2);
+     %>    
 
 
 

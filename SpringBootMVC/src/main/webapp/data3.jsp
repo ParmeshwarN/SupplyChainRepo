@@ -15,6 +15,25 @@
 
 <script type="text/javascript">
 
+function test3(){
+	
+	let buttons=	document.querySelectorAll(".btn")
+		for (i = 0; i < buttons.length; i++) {
+			buttons[i].addEventListener('click', function () {
+				this.textContent='Somani Dealer';
+				arr1[i]=1;
+				console.log(arr1[i]);
+				})
+		  buttons[++i].addEventListener('click', function () {
+				this.textContent='MK Dealer';
+				arr2[i]=0;
+				console.log(arr2[i]);
+				})		
+		}
+		
+	}	
+
+
 
 function assign(){
 	console.log("tested");
@@ -48,7 +67,7 @@ function test2(){
             %>
 <tr>
 <td>Sr.No</td><td>Date</td><td>Customer Details</td><td>Product Ordered</td><td>Quantity</td>
-<td>Delivery Address</td><td>Dispatched</td><td>Date Assigned</td>
+<td>Delivery Address</td><td>Assign Dealer</td><td>Date Assigned</td>
 </tr>
                 <tr>
                  <%
@@ -76,7 +95,7 @@ function test2(){
                      <%=p.getDeliveryAddress()%>
                      </td>
                      <td>
-                     <input type="checkbox" checked>
+                     <a  class="btn" href="#" onclick="test3()" id="id1">Click To Assign</a>
                     
                      </td>
                      <td>
